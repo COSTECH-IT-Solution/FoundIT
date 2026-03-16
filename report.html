@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Document | FoundIt</title>
+    <link rel="stylesheet" href="style 1.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">Found<span>It</span></div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i data-lucide="layout-dashboard"></i> Dashboard</a></li>
+                <li class="active"><a href="report.html"><i data-lucide="file-plus"></i> Report Found</a></li>
+                <li><a href="search.html"><i data-lucide="search"></i> Search Docs</a></li>
+                <li class="logout"><a href="logout.php"><i data-lucide="log-out"></i> Logout</a></li>
+            </ul>
+        </nav>
 
+        <main class="main-content">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Report a Found Document</h2>
+                    <p>Enter the details accurately to help the owner find it.</p>
+                </div>
+
+                <form class="styled-form" action="submit.php" method="POST">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Document Type</label>
+                            <select name="doc_type">
+                                <option>National ID Card</option>
+                                <option>Passport</option>
+                                <option>Driver's License</option>
+                                <option>Diploma / Certificate</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Unique Number (ID No.)</label>
+                            <input type="text" placeholder="e.g. 123456789" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Location Found</label>
+                            <input type="text" placeholder="e.g. Douala Akwa" required>
+                            
+                            
+                        </div>
+                        <div class="input-group">
+                            <label>Photo of Document (Highly Recommended)</label>
+                            <input type="file" name="Photo" accept="image/*">
+                        </div>
+
+                    <div class="input-group">
+                        <label>Owner's Full Name (As seen on document)</label>
+                        <input type="text" placeholder="Ex: Jean-Pierre Mokolo" required>
+                    </div>
+
+                    
+                    <div class="input-group">
+                        <label>Police Station (Drop-off Location)</label>
+                        <select name="location">
+                            <option>Central Police Station</option>
+                            <option>City North Post</option>
+                            <option>Airport Security Station</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Founder's Full Name  </label>
+                        <input type="text" placeholder="eg: John David" required>
+                        
+                    </div>
+
+                    <div class="input-group">
+                        <label>Founder's Contact  </label>
+                        <input type="text" placeholder="Whatsapp prefered " required>
+                        
+                    </div>
+
+                    <div class="reward-box">
+                        <i data-lucide="gift"></i>
+                        <div>
+                            <strong>Reward Info</strong>
+                            <p>Owners can send a tip to your payment ID once verified.</p>
+                        </div>
+                    </div>
+
+                    
+
+
+                    
+                </form>
+                <button type="submit" class="submit-btn">Post Document</button>
+            </div>
+        </main>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
